@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <title>Cafeteria</title>
+</head>
+<body>
+    <div class="modal-login" data-modal="modal-login">
+        <div class="modal-container">
+            <img src="assets/img-modal.svg" alt="" class="modal__img">
+            <form action="" class="modal-form">
+                <button class="modal-btn-close">X</button>
+                <h3 class="modal-text">Seja bem vindo(a) <br> de volta!</h3>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="senha">
+                <button class="modal-btn">Fazer login</button><br>
+                <a href="" data-modal="btnsemconta">Ainda não tem conta?</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-cadastrar" data-modal="modal-cadastrar">
+        <div class="modal-container-cadastrar">
+            <div class="modal-ilustracao">
+                <i class="fas fa-coffee"></i>
+            </div>
+            <form action="" class="modal-form-cadastrar">
+            <button class="modal-cadastrar__btn-close">X</button>
+            <h3 class="modal-text-cadastrar">Cadastra-se e receba as nossas ofertas em primeira mão!</h3>
+            <label for="">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Digite seu email">
+            <label for="password">Senha</label>
+            <input type="password" name="password" placeholder="Crie sua senha">
+            <label for="password">Confirme sua senha</label>
+            <input type="password" name="password" id="password"> <br>
+            <button class="btn-cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="models">
+        <div class="produto">
+            <img src="" alt="" class="produto__img">
+            <span class="produto__nome">...</span>
+            <span class="produto__preco">...</span>
+            <button class="produto__btn">+ detalhes</button>   
+        </div>
+    </div>
+    
+    <div class="topo">
+        <div class="topo-info">
+            <div class="topo-info__telefone">
+                (65) 99937-7889
+            </div>
+            <div class="topo-info__email">
+                jovem@fulano.com
+            </div>
+        </div>
+        <div class="topo-login">
+            <a href="#" class="topo-login__login" data-modal="login">Login</a>
+            <a href="#" class="topo-login__cadastro" data-modal="cadastrar">Cadastre-se!</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav__link active">Home</a></li>
+                <li><a href="cooffees.html" class="nav__link">Cafés</a></li>
+                <li><a href="presentes.html" class="nav__link">Kits&Presentes</a></li>
+                <li><a href="espaco.html" class="nav__link">Nosso Espaço</a></li>
+                <li><a href="somos.html" class="nav__link">Quem Somos</a></li>
+                <li><a href="contato.html" class="nav__link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1 class="hero__titulo">Café de verdade é só aqui</h1>
+        <p class="hero__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolores. Perspiciatis labore excepturi minus deleniti quidem ratione doloribus exercitationem officiis odio culpa ullam, corrupti laborum? Delectus totam debitis officia mollitia?</p>
+    </section>
+
+    <section class="produtos" id="produtos">
+        <h1 class="produtos__titulo">Kits & presentes para presentear quem você ama!</h1>
+        <div class="produtos__container">
+            
+        </div>
+    </section>
+
+    <section class="espaco" id="espaco"> 
+        <h3 class="espaco__titulo">Venha conhecer nosso espaço!</h3>
+        <div data-slide="slides" class="slides">
+                <div class="previous">&laquo;</div>
+                <div class="container-slides">
+
+                </div>
+                <div class="next">&raquo;</div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <div class="banner__info">
+            Aproveite o nosso café da manhã! <br>
+            Segunda à Quinta <br>
+            Das 8h às 10h <br>
+            Apenas R$21,90 por pessoa!
+        </div>
+    </div>
+
+    <footer class="footer">
+        Todos os direitos reservados &copy; 2022. Criado por <a href="https://www.github.com/matheuslguedes" target="_blank">Matheus Guedes</a>
+    </footer>
+    <script src="https://kit.fontawesome.com/37c227c9e4.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/scriptHome.js"></script>
+</body>
+</html>
