@@ -6,12 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Cafeteria</title>
 </head>
 <body>
+    <div class="produto-modal">
+        <div class="produto-container">
+            <button class="btnclose__produto-modal">X</button>
+            <div class="produto-modal-img">
+                <img src="" alt="" class="produto-modal-img__img">
+            </div>
+            <div class="produto-modal-info">
+                <div class="produto-modal__info">
+                    <h4 class="produto-modal__nome">--</h4>
+                    <span class="produto-modal__preco">--</span>
+                </div>
+               <div class="produto-modal-qt">
+                <div class="produto-modal__qt">
+                <button data-modal="decremento" type="button">-</button>
+                <span class="produto-modal__qt-numero">-</span>
+                <button data-modal="incremento" type="button">+</button>
+                </div>
+                <div class="produto-modal__subtotal">
+                    <span class="produto-modal-subtotal"><span class="produto-modal-subtotal-text">Subtotal</span><br>--</span>
+                </div>
+               </div>
+               <div class="cart">
+                <button class="btncart">Adcionar ao Carrinho</button>
+               </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="modal-login" data-modal="modal-login">
         <div class="modal-container">
-            <img src="assets/img-modal.svg" alt="" class="modal__img">
+            <div class="modal-img">
+                <img src="assets/img-modal.svg" alt="" class="modal-img__img">
+            </div>
             <form action="" class="modal-form">
                 <button class="modal-btn-close">X</button>
                 <h3 class="modal-text">Seja bem vindo(a) <br> de volta!</h3>
@@ -28,7 +61,7 @@
     <div class="modal-cadastrar" data-modal="modal-cadastrar">
         <div class="modal-container-cadastrar">
             <div class="modal-ilustracao">
-                <i class="fas fa-coffee"></i>
+                <img src="assets/logo.svg" alt="" class="logo__modal">
             </div>
             <form action="" class="modal-form-cadastrar">
             <button class="modal-cadastrar__btn-close">X</button>
@@ -51,8 +84,8 @@
             <img src="" alt="" class="produto__img">
             <span class="produto__nome">...</span>
             <span class="produto__preco">...</span>
-            <button class="produto__btn">+ detalhes</button>   
         </div>
+      
     </div>
     
     <div class="topo">
@@ -71,8 +104,8 @@
     </div>
 
     <header>
-        <div class="logo">
-
+        <div>
+            <img src="assets/logo.svg" alt="" class="logo">
         </div>
         <nav>
             <ul class="nav-list">

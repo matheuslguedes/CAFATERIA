@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -8,8 +5,7 @@
 }
 
 :root{
-    --ff-primary: 'Cairo';
-    --ff-secundary: 'Vujahday Script';
+     --ff-secundary: 'Vujahday Script';
     --clr-main: #443742;
     --clr-secundary: #846C5B;
     --clr-secundary-light: #CEA07E; 
@@ -26,8 +22,7 @@ html{
     overflow-x: hidden;
 }
 body{
-    font-family: var(--ff-primary);
-      
+    font-family: 'Montserrat', sans-serif;
 }
 ul li{
     list-style: none;
@@ -62,9 +57,10 @@ ul li{
 /*02. HEADER
 /***********************************/
 header{
-    max-height: 10rem;
+    max-height: 15rem;
     width: 100vw;
-    background-color: var(--clr-main);
+    background: rgb(68,55,66);
+    background: linear-gradient(90deg, rgba(68,55,66,1) 0%, rgba(87,76,85,1) 100%);
     color: var(--clr-white);
     display: flex;
     flex-direction: column;
@@ -73,12 +69,8 @@ header{
     gap: 1rem;
     padding: 1rem 0;
 }
-header .logo{
-    width: 20rem;
-    height: 3rem;
-    background-color: var(--clr-banana-light);
-    border-radius: 10px;
-
+.logo{
+    width: 50px;
 }
 header .nav-list{
     display: flex;
@@ -118,12 +110,13 @@ header .nav__link:hover{
     padding: 0 calc((100% - 117rem) / 2)
 }
 .hero__titulo{
-    font-size: 4.8rem;
+    font-size: 4.2rem;
     color: var(--clr-main);
     text-transform: uppercase;
+    padding: 4rem 0 2rem ;
 }
 .hero__description{
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--clr-main);
     max-width: 60rem;
 }
@@ -137,7 +130,7 @@ header .nav__link:hover{
 .produtos__titulo{
     font-variant: small-caps;
     font-size: 4rem;
-    color: var(--clr-contrast);
+    color: #524650;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -310,19 +303,22 @@ header .nav__link:hover{
 }
 .modal-container{
     display: flex;
-    gap: 1.6rem;
+    gap: .8rem;
     background-color: #fff;
     border-radius: 4px;
     position: relative;
+    width: 60vw;
+    height: 60vh;
 }
 .modal-form{
     margin-top: 8vh;
+    flex: 1;
 } 
 .modal-btn-close{
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: var(--clr-contrast);
+    background-color: var(--clr-main);
     color: #fff;
     border: none;
     padding: .4rem;
@@ -335,19 +331,23 @@ header .nav__link:hover{
     outline: none;
 }
 
-.modal__img{
-    width: 50%;
+.modal-img{
+    width: 30vw;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    overflow: hidden;
+}
+.modal-img__img{
+    width: 100%;
 }
 .modal-text{
     font-size: 3.2rem;
-    color: var(--clr-contrast);
+    color: var(--clr-main);
     line-height: 36px;
 }
 .modal-btn{
     margin-top: 1.6rem;
-    background-color: var(--clr-contrast);
+    background-color: var(--clr-main);
     color: var(--clr-white);
     border: none;
     padding: .8rem 2.4rem;
@@ -388,11 +388,11 @@ header .nav__link:hover{
 }
 .modal-text-cadastrar{
     font-size: 2.4rem;
-    color: var(--clr-contrast);
+    color: var(--clr-main);
     line-height: 32px;
 }
 .modal-ilustracao{
-    background-color: var(--clr-contrast);
+    background-color: var(--clr-main);
     flex: 1;
     display: flex;
     justify-content: center;
@@ -400,9 +400,8 @@ header .nav__link:hover{
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.modal-ilustracao i{
-    font-size: 8rem;
-    color: var(--clr-white);
+.logo__modal{
+    width: 8rem;
 }
 .modal-form-cadastrar{
     flex: 1;
@@ -420,7 +419,7 @@ header .nav__link:hover{
 .btn-cadastrar{
     margin-top: 1.2rem;
     padding: .8rem 2.4rem;
-    background-color: var(--clr-contrast);
+    background-color: var(--clr-main);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -434,9 +433,121 @@ header .nav__link:hover{
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: var(--clr-contrast);
+    background-color: var(--clr-main);
     color: #fff;
     border: none;
     padding: .4rem;
     cursor: pointer;
+}
+/***********************************/
+/*08. produto-modal
+/***********************************/
+.produto-modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: all ease-in-out .3s;
+    display: none;
+}
+.produto-modal.active{
+    display: block;
+}
+.produto-container{
+    width: 60vw;
+    height: 60vh;
+    background-color: #fff;
+    margin: 10vh auto;
+    display: flex;
+    position: relative;
+}
+.produto-modal-img{
+    width: 25vw;
+}
+.produto-modal-img__img{
+    width: 30rem;
+
+}
+.produto-modal-info{
+    margin-top: 10vh;
+    flex: 1;
+    width: 100%;
+}
+.produto-modal__nome{
+    font-size: 2.8rem;
+    color: var(--clr-main);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.produto-modal__preco{
+    font-size: 1.6rem;
+    color: var(--clr-secundary);
+}
+.produto-modal-qt{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+}
+.produto-modal__qt{
+    padding: .8rem 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    border: 1px solid var(--clr-main);
+}
+.produto-modal__qt button{
+    font-size: 1.6rem;
+    background-color:#fff;
+    border: none;
+    padding: .4rem;
+    cursor: pointer;
+}
+.produto-modal__qt-numero{
+    font-size: 2rem;
+}
+.produto-modal-subtotal{
+    font-size: 1.6rem;
+    color: var(--clr-main);
+}
+.produto-modal-subtotal-text{
+    border-bottom: 1px solid var(--clr-main);
+}
+.cart{
+    width: 80%;
+    text-align: right;
+}
+.btncart{
+    padding: .8rem 2.4rem;
+    background-color: var(--clr-main);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnclose__produto-modal{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: var(--clr-main);
+    color: #fff;
+    border: none;
+    padding: .4rem;
+    cursor: pointer;
+}
+.produto-modal-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.produto-modal-img__img{
+ width: 60%;
 }
